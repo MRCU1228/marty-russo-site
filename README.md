@@ -1,32 +1,21 @@
-# Marty Russo — website
+# marty-russo.com
 
-A minimal static website. Plain HTML + CSS, no build step.
+The source for my personal website. Plain HTML and CSS, no framework and no build
+step — a single static page served by GitHub Pages, deployed automatically by a
+GitHub Actions workflow on every push to `main`.
 
-## Files
+Kept intentionally minimal so it stays fast and easy to change.
 
-| File | Purpose |
+## Layout
+
+| Path | Purpose |
 |------|---------|
-| `index.html` | The page. Currently just shows "Marty Russo" at the top. |
-| `style.css` | Styling. |
-| `.github/workflows/deploy.yml` | Publishes the site to GitHub Pages on every push to `main`. |
+| `index.html` | the page |
+| `style.css` | styling |
+| `CNAME` | custom domain (`marty-russo.com`) for GitHub Pages |
+| `.github/workflows/deploy.yml` | builds and publishes to GitHub Pages |
 
-## Run locally
+## Local preview
 
-Open `index.html` in a browser, or serve the folder:
-
-```
-python -m http.server
-```
-
-Then visit http://localhost:8000
-
-## Publish
-
-1. Create a repo on GitHub and push this folder to the `main` branch.
-2. In the repo: **Settings → Pages → Build and deployment → Source = GitHub Actions**.
-3. Every push to `main` deploys automatically. The live URL appears in the
-   Actions run summary and under Settings → Pages.
-
-## Add content
-
-Put it inside the `<main>` element in `index.html`.
+Open `index.html` directly, or serve the folder with `python -m http.server` and
+visit `http://localhost:8000`.
